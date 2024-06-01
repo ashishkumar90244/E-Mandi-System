@@ -1,0 +1,63 @@
+/* productPage.css */
+
+/* Container for the product details */
+.product-details {
+    padding: 20px;
+}
+
+/* Style the product image */
+.product-image img {
+    max-width: 100%;
+    height: auto;
+    border-radius: 5px;
+    margin-bottom: 20px;
+}
+
+/* Style the price */
+.price {
+    font-size: 20px;
+    color: #007bff; /* Blue color */
+}
+
+/* Style the description */
+.description {
+    margin-bottom: 10px;
+}
+
+/* Style the seller information */
+.seller {
+    font-style: italic;
+    margin-bottom: 10px;
+}
+
+/* Style the stock information */
+.stock {
+    margin-bottom: 20px;
+}
+
+/* Style the quantity input */
+#quantity {
+    width: 60px;
+    margin-right: 10px;
+}
+
+/* Style the "Add to Cart" button */
+button[type="submit"] {
+    background-color: #28a745; /* Green color */
+    color: #fff; /* White color */
+    border: none;
+    padding: 10px 20px;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+button[type="submit"]:hover {
+    background-color: #218838; /* Darker green color */
+}
+
+/* Style the footer */
+footer {
+    background-color: #f8f9fa; /* Light gray color */
+    padding: 20px;
+    text-align: center;
+}

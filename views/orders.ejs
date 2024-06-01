@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My Orders</title>
+    <link rel="stylesheet" href="/css/style1.css"> <!-- Link to your CSS file -->
+</head>
+
+<body>
+    <header>
+        <!-- Navigation bar with logo and links -->
+        <nav>
+            
+            <ul class="nav-links">
+                <li><a href="/">Home</a></li>
+                <li><a href="/shop">Shop</a></li>
+                <li class="active"><a href="/orders">My Orders</a></li>
+                <li><a href="/profile">My Profile</a></li>
+                <!-- Add more links as needed -->
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <section class="orders">
+            <h1>My Orders</h1>
+            <!-- Display a list of orders -->
+            <% for(let i = 0; i < orders.length; i++) { %>
+            <% var total = orders[i].price * orders[i].quantity %>
+            <div class="order">
+                <h2>Order ID: <%= orders[i].id %></h2>
+                <p>Date: <%= orders[i].createdAt %></p>
+                <ul>
+
+                    <li><%= orders[i].title %> - <%= orders[i].price %></li>
+                    
+                    <% while(i<orders.length-1 && orders[i].createdAt===orders[i+1].createdAt) { %>
+                    <% total += orders[i+1].price * orders[i+1].quantity %>
+                    <li><%= orders[i+1].title %> - <%= orders[i+1].price %></li>
+                    <% i++ %>
+                    <% } %>
+                </ul>
+                <p>Total: <%= total %></p>
+                <p>Status: <%= orders[i].status %></p>
+            </div>
+            <% } %>
+        </section>
+    </main>
+
+    <footer>
+        <!-- Footer content -->
+    </footer>
+</body>
+
+</html>
